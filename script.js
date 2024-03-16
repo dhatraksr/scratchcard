@@ -1,6 +1,6 @@
 const scContainer = document.getElementById('js--sc--container');
-randomNumber = Math.floor(Math.random() * 101);
-document.getElementById("result").innerHTML ="<br/><br/>reward is ₹ " + randomNumber;
+randomNumber = Math.floor(Math.random() * 130);
+// document.getElementById("result").innerHTML ="<br/><br/>reward is ₹ " + randomNumber;
 
 
 const sc = new ScratchCard('#js--sc--container', {
@@ -8,7 +8,7 @@ const sc = new ScratchCard('#js--sc--container', {
   containerWidth: scContainer.offsetWidth,
   containerHeight: 300,
   imageForwardSrc: './front-image.png',
-  imageBackgroundSrc: './scratch-image-1.png',
+  //  imageBackgroundSrc: './scratch-image-1.png',
   // htmlBackground: '<div class="inner_html"><p id="reward">Subscribe for more Videos</p></div>',
   clearZoneRadius: 30,  
   nPoints:50,
@@ -22,9 +22,11 @@ sc.init().then(() => {
     console.log(percent)
 
   
-  }) 
+  })
+  
+  document.getElementById("result").innerHTML ="<br/><br/>reward is ₹ " + randomNumber;
+
 
 }).catch((error) => {
   alert(error.message);
 });
-
