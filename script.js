@@ -24,7 +24,7 @@ sc.init().then(() => {
   
   })
   
-  document.getElementById("result").innerHTML ="<br/><br/>reward is ₹ " + randomNumber;
+  document.getElementById("result").innerHTML ="<br/><br/>Your reward is ₹ " + randomNumber;
 
 
 }).catch((error) => {
